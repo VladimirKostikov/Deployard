@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Готови / Общо",
     "revision": "Revision",
-    "status": "Статус"
+    "status": "Статус",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -314,5 +315,29 @@
       "every": "на всеки {{seconds}}с",
       "timeout": "timeout {{seconds}}с"
     }
+  },
+  "search": {
+    "placeholder": "Търсене по име, image, namespace или предупреждение",
+    "empty": "Няма deployments за това търсене"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Няма probes"
+  },
+  "events": {
+    "title": "Скорошни събития",
+    "loading": "Зареждане на събития...",
+    "error": "Неуспешно зареждане на събития",
+    "empty": "Няма скорошни събития за този deployment",
+    "warning": "Предупреждение",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Копирай image",
+    "pod": "Копирай pod",
+    "kubectl": "Копирай kubectl",
+    "copied": "Копирано"
   }
 }

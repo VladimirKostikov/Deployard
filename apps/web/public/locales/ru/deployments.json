@@ -36,7 +36,8 @@
     "image": "Образ",
     "replicas": "Готово / Всего",
     "revision": "Ревизия",
-    "status": "Статус"
+    "status": "Статус",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Здоров",
@@ -314,5 +315,29 @@
       "every": "каждые {{seconds}}с",
       "timeout": "таймаут {{seconds}}с"
     }
+  },
+  "search": {
+    "placeholder": "Поиск по имени, образу, namespace или предупреждению",
+    "empty": "Нет deployments по этому поиску"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Нет probes"
+  },
+  "events": {
+    "title": "Недавние события",
+    "loading": "Загрузка событий...",
+    "error": "Не удалось загрузить события",
+    "empty": "Нет недавних событий для этого deployment",
+    "warning": "Предупреждение",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Копировать image",
+    "pod": "Копировать pod",
+    "kubectl": "Копировать kubectl",
+    "copied": "Скопировано"
   }
 }

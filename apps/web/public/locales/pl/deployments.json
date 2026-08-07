@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Gotowe / Razem",
     "revision": "Rewizja",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Zdrowy",
@@ -314,5 +315,29 @@
       "every": "co {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Szukaj po nazwie, obrazie, namespace lub ostrzeżeniu",
+    "empty": "Brak deployments dla tego wyszukiwania"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Brak probes"
+  },
+  "events": {
+    "title": "Ostatnie zdarzenia",
+    "loading": "Ładowanie zdarzeń...",
+    "error": "Nie udało się załadować zdarzeń",
+    "empty": "Brak ostatnich zdarzeń dla tego deployment",
+    "warning": "Ostrzeżenie",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopiuj obraz",
+    "pod": "Kopiuj pod",
+    "kubectl": "Kopiuj kubectl",
+    "copied": "Skopiowano"
   }
 }

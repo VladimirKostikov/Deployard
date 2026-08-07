@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { DeploymentSummary } from '@dpd/shared';
+import { DeploymentProbeBadges } from './DeploymentProbeBadges';
 import { DeploymentRestartIndicator } from './DeploymentRestartIndicator';
 import { DeploymentStatusDialog } from './DeploymentStatusDialog';
 import { DeploymentTableActions } from './DeploymentTableActions';
@@ -37,7 +38,14 @@ export function DeploymentTableRow({
       {showNamespace ? (
         <td className="px-5 py-4 text-secondary">{deployment.namespace}</td>
       ) : null}
-      <td className="px-5 py-4 text-secondary">{deployment.image}</td>
+      <td className="px-5 py-4 text-secondary">
+        <div className="max-w-[18rem] truncate" title={deployment.image}>
+          {deployment.image}
+        </div>
+      </td>
+      <td className="px-5 py-4">
+        <DeploymentProbeBadges deployment={deployment} />
+      </td>
       <td className="px-5 py-4 text-secondary">
         {deployment.readyReplicas}/{deployment.replicas}
       </td>
@@ -49,6 +57,11 @@ export function DeploymentTableRow({
           <DeploymentRestartIndicator deployment={deployment} restartPending={restartPending} />
           {!restartPending ? (
             <DeploymentStatusDialog deployment={deployment} restartPending={false} />
+          ) : null}
+          {deployment.latestWarning ? (
+            <span className="text-xs text-danger" title={deployment.latestWarning.message}>
+              {deployment.latestWarning.reason}
+            </span>
           ) : null}
         </div>
       </td>

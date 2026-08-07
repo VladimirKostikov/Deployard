@@ -3,6 +3,7 @@ import {
   AuthUser,
   ALL_NAMESPACES,
   DeploymentConfigSummary,
+  DeploymentEventSummary,
   DeploymentHealthInsight,
   DeploymentRevision,
   DeploymentSummary,
@@ -19,6 +20,7 @@ import { DeploymentsConfigRepository } from '../../k8s/repositories/deployments-
 import { DeploymentsHealthRepository } from '../../k8s/repositories/deployments-health.repository';
 import { resolveImageDefaults } from '../../k8s/config/deployment-config.resolver';
 import { PermissionChecker } from '../auth/permission-checker.service';
+import { DeploymentEventsService } from './deployment-events.service';
 import {
   CreateDeploymentDto,
   UpdateDeploymentConfigDto,
@@ -33,21 +35,34 @@ export class DeploymentsService {
     private readonly deploymentsRepository: IDeploymentsRepository,
     private readonly deploymentsConfigRepository: DeploymentsConfigRepository,
     private readonly deploymentsHealthRepository: DeploymentsHealthRepository,
+    private readonly deploymentEventsService: DeploymentEventsService,
     private readonly permissionChecker: PermissionChecker,
   ) {}
 
   async list(namespace: string, user: AuthUser): Promise<DeploymentSummary[]> {
     const items = await this.deploymentsRepository.list(namespace);
 
+    const filtered =
+      namespace === ALL_NAMESPACES
+        ? this.permissionChecker.filterDeploymentsAcrossNamespaces(user, items)
+        : this.permissionChecker.filterDeployments(user, namespace, items);
+
     if (namespace === ALL_NAMESPACES) {
-      return this.permissionChecker.filterDeploymentsAcrossNamespaces(user, items);
+      return filtered;
     }
 
-    return this.permissionChecker.filterDeployments(user, namespace, items);
+    return this.deploymentEventsService.attachLatestWarnings(namespace, filtered);
   }
 
-  get(namespace: string, name: string): Promise<DeploymentSummary> {
-    return this.deploymentsRepository.findByName(namespace, name);
+  async get(namespace: string, name: string): Promise<DeploymentSummary> {
+    const summary = await this.deploymentsRepository.findByName(namespace, name);
+    const [enriched] = await this.deploymentEventsService.attachLatestWarnings(namespace, [summary]);
+    return enriched ?? summary;
+  }
+
+  async listEvents(namespace: string, name: string): Promise<DeploymentEventSummary[]> {
+    await this.deploymentsRepository.findByName(namespace, name);
+    return this.deploymentEventsService.listForDeployment(namespace, name);
   }
 
   async history(namespace: string, name: string): Promise<DeploymentRevision[]> {

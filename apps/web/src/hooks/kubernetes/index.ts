@@ -3,6 +3,7 @@ export { useClusters } from './useClusters';
 export { useDeployment } from './useDeployment';
 export { useDeploymentConfig } from './useDeploymentConfig';
 export { useDeploymentHistory } from './useDeploymentHistory';
+export { useDeploymentEvents } from './useDeploymentEvents';
 export { useDeployments } from './useDeployments';
 export { useImageDefaults } from './useImageDefaults';
 export { useRollbackDeployment } from './useRollbackDeployment';

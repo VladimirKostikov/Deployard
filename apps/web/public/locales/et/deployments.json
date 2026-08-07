@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Valmis / Kokku",
     "revision": "Revision",
-    "status": "Olek"
+    "status": "Olek",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "iga {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Otsi nime, image, namespace või hoiatuse järgi",
+    "empty": "Ükski deployment ei vasta otsingule"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Probe puuduvad"
+  },
+  "events": {
+    "title": "Hiljutised sündmused",
+    "loading": "Sündmuste laadimine...",
+    "error": "Sündmuste laadimine ebaõnnestus",
+    "empty": "Selle deploymenti kohta pole hiljutisi sündmusi",
+    "warning": "Hoiatus",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopeeri image",
+    "pod": "Kopeeri pod",
+    "kubectl": "Kopeeri kubectl",
+    "copied": "Kopeeritud"
   }
 }

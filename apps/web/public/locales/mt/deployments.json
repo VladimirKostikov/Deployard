@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Lest / Total",
     "revision": "Revision",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "B'saħħtu",
@@ -312,5 +313,29 @@
       "every": "kull {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Fittex skont isem, image, namespace jew twissija",
+    "empty": "L-ebda deployment ma jaqbel ma din it-tfittxija"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Ebda probes"
+  },
+  "events": {
+    "title": "Avvenimenti riċenti",
+    "loading": "Qed jitgħabbew l-avvenimenti...",
+    "error": "Ma rnexxiex jitgħabbew l-avvenimenti",
+    "empty": "Ebda avveniment riċenti għal dan id-deployment",
+    "warning": "Twissija",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Ikkopja image",
+    "pod": "Ikkopja pod",
+    "kubectl": "Ikkopja kubectl",
+    "copied": "Ikkopjat"
   }
 }

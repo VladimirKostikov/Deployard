@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Redo / Totalt",
     "revision": "Revision",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "var {{seconds}}:e s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Sök efter namn, image, namespace eller varning",
+    "empty": "Inga deployments matchar sökningen"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Inga probes"
+  },
+  "events": {
+    "title": "Senaste events",
+    "loading": "Laddar events...",
+    "error": "Kunde inte ladda events",
+    "empty": "Inga senaste events för denna deployment",
+    "warning": "Varning",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopiera image",
+    "pod": "Kopiera pod",
+    "kubectl": "Kopiera kubectl",
+    "copied": "Kopierat"
   }
 }

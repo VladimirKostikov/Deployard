@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Ready / Skupaj",
     "revision": "Revizija",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -314,5 +315,29 @@
       "every": "vsakih {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Išči po imenu, image, namespace ali opozorilu",
+    "empty": "Nobena deployment ne ustreza iskanju"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Ni probes"
+  },
+  "events": {
+    "title": "Nedavni dogodki",
+    "loading": "Nalaganje dogodkov...",
+    "error": "Nalaganje dogodkov ni uspelo",
+    "empty": "Ni nedavnih dogodkov za ta deployment",
+    "warning": "Opozorilo",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopiraj image",
+    "pod": "Kopiraj pod",
+    "kubectl": "Kopiraj kubectl",
+    "copied": "Kopirano"
   }
 }

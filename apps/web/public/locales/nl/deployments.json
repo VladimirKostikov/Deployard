@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Ready / Total",
     "revision": "Revision",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Gezond",
@@ -312,5 +313,29 @@
       "every": "elke {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Zoek op naam, image, namespace of waarschuwing",
+    "empty": "Geen deployments voor deze zoekopdracht"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Geen probes"
+  },
+  "events": {
+    "title": "Recente events",
+    "loading": "Events laden...",
+    "error": "Events laden mislukt",
+    "empty": "Geen recente events voor deze deployment",
+    "warning": "Waarschuwing",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Image kopiëren",
+    "pod": "Podnaam kopiëren",
+    "kubectl": "kubectl kopiëren",
+    "copied": "Gekopieerd"
   }
 }

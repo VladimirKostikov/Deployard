@@ -17,7 +17,7 @@ void i18n
     preload: ['en'],
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
-      queryStringParams: { v: '20250704b' },
+      queryStringParams: { v: '20260807a' },
     },
     detection: {
       order: ['localStorage'],

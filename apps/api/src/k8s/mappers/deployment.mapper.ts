@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DeploymentRevision, DeploymentSummary, readDeploymentDisableState } from '@dpd/shared';
 import * as k8s from '@kubernetes/client-node';
+import { readContainerProbeFlags } from './deployment-probe-flags';
 
 @Injectable()
 export class DeploymentMapper {
@@ -10,6 +11,7 @@ export class DeploymentMapper {
     const { disabled, previousReplicas, disabledWithErrors } = readDeploymentDisableState(
       item.metadata?.annotations,
     );
+    const probeFlags = readContainerProbeFlags(container);
 
     return {
       name: item.metadata?.name ?? '',
@@ -26,6 +28,7 @@ export class DeploymentMapper {
       disabled,
       previousReplicas,
       disabledWithErrors,
+      ...probeFlags,
     };
   }
 

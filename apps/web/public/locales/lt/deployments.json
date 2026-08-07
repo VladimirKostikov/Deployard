@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Paruošta / Iš viso",
     "revision": "Revision",
-    "status": "Būsena"
+    "status": "Būsena",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "kas {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Ieškoti pagal pavadinimą, image, namespace ar įspėjimą",
+    "empty": "Nėra deployments pagal šią paiešką"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Nėra probes"
+  },
+  "events": {
+    "title": "Naujausi įvykiai",
+    "loading": "Įkeliami įvykiai...",
+    "error": "Nepavyko įkelti įvykių",
+    "empty": "Šiam deployment nėra naujausių įvykių",
+    "warning": "Įspėjimas",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopijuoti image",
+    "pod": "Kopijuoti pod",
+    "kubectl": "Kopijuoti kubectl",
+    "copied": "Nukopijuota"
   }
 }

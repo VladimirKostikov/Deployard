@@ -50,6 +50,40 @@ describe('DeploymentMapper', () => {
       disabled: false,
       previousReplicas: undefined,
       disabledWithErrors: false,
+      hasLivenessProbe: false,
+      hasReadinessProbe: false,
+      hasStartupProbe: false,
+    });
+  });
+
+  it('maps probe flags from the primary container', () => {
+    const deployment: k8s.V1Deployment = {
+      metadata: {
+        name: 'demo-api',
+        namespace: 'default',
+        creationTimestamp: new Date('2026-06-23T12:00:00.000Z'),
+      },
+      spec: {
+        replicas: 1,
+        template: {
+          spec: {
+            containers: [
+              {
+                name: 'api',
+                image: 'nginx:1.27-alpine',
+                readinessProbe: { httpGet: { path: '/ready', port: 80 } },
+                startupProbe: { tcpSocket: { port: 80 } },
+              },
+            ],
+          },
+        },
+      },
+    };
+
+    expect(mapper.toSummary(deployment)).toMatchObject({
+      hasLivenessProbe: false,
+      hasReadinessProbe: true,
+      hasStartupProbe: true,
     });
   });
 });

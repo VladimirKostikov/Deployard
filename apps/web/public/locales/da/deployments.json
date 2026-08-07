@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Klar / I alt",
     "revision": "Revision",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "hver {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Søg efter navn, image, namespace eller advarsel",
+    "empty": "Ingen deployments matcher søgningen"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Ingen probes"
+  },
+  "events": {
+    "title": "Seneste events",
+    "loading": "Indlæser events...",
+    "error": "Kunne ikke indlæse events",
+    "empty": "Ingen seneste events for denne deployment",
+    "warning": "Advarsel",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopiér image",
+    "pod": "Kopiér pod",
+    "kubectl": "Kopiér kubectl",
+    "copied": "Kopieret"
   }
 }

@@ -29,7 +29,7 @@ export function DeploymentGroupedTable({ namespace, deployments }: DeploymentGro
   const { t } = useTranslation('deployments');
   const showAllNamespaces = namespace === ALL_NAMESPACES;
   useSyncDeploymentRestartTracks(deployments);
-  const columnCount = showAllNamespaces ? 8 : 7;
+  const columnCount = showAllNamespaces ? 9 : 8;
   const groups = useMemo(
     () =>
       groupDeploymentsByProject(deployments, t('projectGroups.standalone'), {
@@ -62,6 +62,7 @@ export function DeploymentGroupedTable({ namespace, deployments }: DeploymentGro
               <th className="px-5 py-3 font-medium">{t('table.namespace')}</th>
             ) : null}
             <th className="px-5 py-3 font-medium">{t('table.image')}</th>
+            <th className="px-5 py-3 font-medium">{t('table.probes')}</th>
             <th className="px-5 py-3 font-medium">{t('table.replicas')}</th>
             <th className="px-5 py-3 font-medium">{t('table.revision')}</th>
             <th className="px-5 py-3 font-medium">{t('table.status')}</th>

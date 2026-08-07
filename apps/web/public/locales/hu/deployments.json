@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Ready / Total",
     "revision": "Revision",
-    "status": "Állapot"
+    "status": "Állapot",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Egészséges",
@@ -312,5 +313,29 @@
       "every": "minden {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Keresés név, image, namespace vagy figyelmeztetés szerint",
+    "empty": "Nincs a keresésnek megfelelő deployment"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Nincs probe"
+  },
+  "events": {
+    "title": "Legutóbbi események",
+    "loading": "Események betöltése...",
+    "error": "Az események betöltése sikertelen",
+    "empty": "Nincs friss esemény ehhez a deploymenthez",
+    "warning": "Figyelmeztetés",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Image másolása",
+    "pod": "Pod másolása",
+    "kubectl": "kubectl másolása",
+    "copied": "Másolva"
   }
 }

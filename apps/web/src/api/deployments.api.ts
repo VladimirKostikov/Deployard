@@ -3,6 +3,7 @@ import type {
   DisableProjectGroupResult,
   RestartProjectGroupResult,
   DeploymentConfigSummary,
+  DeploymentEventSummary,
   DeploymentHealthInsight,
   DeploymentRevision,
   DeploymentSummary,
@@ -66,6 +67,10 @@ export function getDeploymentConfig(namespace: string, name: string) {
 
 export function getDeploymentHealth(namespace: string, name: string) {
   return request<DeploymentHealthInsight>(`/deployments/${name}/health?namespace=${namespace}`);
+}
+
+export function getDeploymentEvents(namespace: string, name: string) {
+  return request<DeploymentEventSummary[]>(`/deployments/${name}/events?namespace=${namespace}`);
 }
 
 export function updateDeploymentConfig(

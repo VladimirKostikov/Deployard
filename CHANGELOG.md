@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Deployment list search by name, image, namespace, or warning reason
+- Probe badges on deployment list and overview (liveness / readiness / startup)
+- Recent Kubernetes events on deployment detail (`GET /deployments/:name/events`)
+- Latest warning reason on deployment list rows when present
+- Copy actions for image, pod name, and kubectl describe hint
+
 ## [0.1.0] - 2026-08-07
 
 ### Added

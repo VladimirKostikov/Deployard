@@ -5,9 +5,11 @@ import { K8sClientPool } from './pool/k8s-client.pool';
 import { K8sClientFactory } from './factories/k8s-client.factory';
 import { KubeConfigLoader } from './loaders/kube-config.loader';
 import { DeploymentMapper } from './mappers/deployment.mapper';
+import { DeploymentEventMapper } from './mappers/deployment-event.mapper';
 import { KubeExceptionMapper } from './mappers/kube-exception.mapper';
 import { NamespaceMapper } from './mappers/namespace.mapper';
 import { PodMapper } from './mappers/pod.mapper';
+import { DeploymentEventsRepository } from './repositories/deployment-events.repository';
 import { PodLogsStreamer } from './streamers/pod-logs.streamer';
 import { DeploymentsReadRepository } from './repositories/deployments-read.repository';
 import { DeploymentsRollbackRepository } from './repositories/deployments-rollback.repository';
@@ -56,6 +58,8 @@ import { NodePortAllocatorService } from './network/node-port-allocator.service'
     ClusterContextInterceptor,
     K8sService,
     DeploymentMapper,
+    DeploymentEventMapper,
+    DeploymentEventsRepository,
     PodMapper,
     PodLogsStreamer,
     NamespaceMapper,
@@ -117,6 +121,8 @@ import { NodePortAllocatorService } from './network/node-port-allocator.service'
     DeploymentsComposeRepository,
     DeploymentsConfigRepository,
     DeploymentsHealthRepository,
+    DeploymentEventsRepository,
+    DeploymentEventMapper,
     ServicesComposeRepository,
     ConfigMapsRepository,
     DeploymentsProjectRepository,

@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Valmis / Yhteensä",
     "revision": "Revision",
-    "status": "Status"
+    "status": "Status",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "joka {{seconds}}. s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Hae nimellä, imagella, namespacella tai varoituksella",
+    "empty": "Ei deployments-osumia tälle haulle"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Ei probeja"
+  },
+  "events": {
+    "title": "Viimeisimmät eventit",
+    "loading": "Ladataan eventtejä...",
+    "error": "Eventtien lataus epäonnistui",
+    "empty": "Ei viimeaikaisia eventtejä tälle deploymentille",
+    "warning": "Varoitus",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopioi image",
+    "pod": "Kopioi pod",
+    "kubectl": "Kopioi kubectl",
+    "copied": "Kopioitu"
   }
 }

@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Ready / Spolu",
     "revision": "Revízia",
-    "status": "Stav"
+    "status": "Stav",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "V poriadku",
@@ -314,5 +315,29 @@
       "every": "každých {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Hľadať podľa názvu, image, namespace alebo varovania",
+    "empty": "Žiadne deployments nezodpovedajú hľadaniu"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Žiadne probes"
+  },
+  "events": {
+    "title": "Nedávne udalosti",
+    "loading": "Načítanie udalostí...",
+    "error": "Nepodarilo sa načítať udalosti",
+    "empty": "Žiadne nedávne udalosti pre tento deployment",
+    "warning": "Varovanie",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopírovať image",
+    "pod": "Kopírovať pod",
+    "kubectl": "Kopírovať kubectl",
+    "copied": "Skopírované"
   }
 }

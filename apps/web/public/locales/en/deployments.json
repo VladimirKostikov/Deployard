@@ -6,6 +6,10 @@
   "error": "Failed to load deployments",
   "empty": "No deployments found in this namespace",
   "emptyAll": "No deployments found in accessible namespaces",
+  "search": {
+    "placeholder": "Search by name, image, namespace, or warning",
+    "empty": "No deployments match this search"
+  },
   "projectGroups": {
     "standalone": "Standalone",
     "services_one": "{{count}} service",
@@ -32,9 +36,30 @@
     "name": "Name",
     "namespace": "Namespace",
     "image": "Image",
+    "probes": "Probes",
     "replicas": "Ready / Total",
     "revision": "Revision",
     "status": "Status"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "No probes"
+  },
+  "events": {
+    "title": "Recent events",
+    "loading": "Loading events...",
+    "error": "Failed to load events",
+    "empty": "No recent events for this deployment",
+    "warning": "Warning",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Copy image",
+    "pod": "Copy pod name",
+    "kubectl": "Copy kubectl",
+    "copied": "Copied"
   },
   "status": {
     "healthy": "Healthy",

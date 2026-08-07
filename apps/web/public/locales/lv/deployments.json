@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Gatavs / Kopā",
     "revision": "Revision",
-    "status": "Statuss"
+    "status": "Statuss",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "katras {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Meklēt pēc nosaukuma, image, namespace vai brīdinājuma",
+    "empty": "Nav deployments, kas atbilst meklēšanai"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Nav probes"
+  },
+  "events": {
+    "title": "Nesenie notikumi",
+    "loading": "Ielādē notikumus...",
+    "error": "Neizdevās ielādēt notikumus",
+    "empty": "Šim deployment nav nesenu notikumu",
+    "warning": "Brīdinājums",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopēt image",
+    "pod": "Kopēt pod",
+    "kubectl": "Kopēt kubectl",
+    "copied": "Nokopēts"
   }
 }

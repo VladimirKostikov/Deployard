@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Ready / Total",
     "revision": "Revision",
-    "status": "Stare"
+    "status": "Stare",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Sănătos",
@@ -314,5 +315,29 @@
       "every": "la fiecare {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Caută după nume, imagine, namespace sau avertisment",
+    "empty": "Niciun deployment nu corespunde acestei căutări"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Fără probes"
+  },
+  "events": {
+    "title": "Evenimente recente",
+    "loading": "Se încarcă evenimentele...",
+    "error": "Nu s-au putut încărca evenimentele",
+    "empty": "Nu există evenimente recente pentru acest deployment",
+    "warning": "Avertisment",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Copiază imaginea",
+    "pod": "Copiază podul",
+    "kubectl": "Copiază kubectl",
+    "copied": "Copiat"
   }
 }

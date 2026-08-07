@@ -34,7 +34,8 @@
     "image": "Imagen",
     "replicas": "Ready / Total",
     "revision": "Revisión",
-    "status": "Estado"
+    "status": "Estado",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "En buen estado",
@@ -312,5 +313,29 @@
       "every": "cada {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Buscar por nombre, imagen, namespace o aviso",
+    "empty": "Ningún deployment coincide con esta búsqueda"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Sin probes"
+  },
+  "events": {
+    "title": "Eventos recientes",
+    "loading": "Cargando eventos...",
+    "error": "No se pudieron cargar los eventos",
+    "empty": "No hay eventos recientes para este deployment",
+    "warning": "Aviso",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Copiar imagen",
+    "pod": "Copiar pod",
+    "kubectl": "Copiar kubectl",
+    "copied": "Copiado"
   }
 }

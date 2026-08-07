@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Tilbún / Samtals",
     "revision": "Revision",
-    "status": "Staða"
+    "status": "Staða",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Healthy",
@@ -312,5 +313,29 @@
       "every": "á {{seconds}}s fresti",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Leita eftir nafni, image, namespace eða viðvörun",
+    "empty": "Engin deployments passa við leitina"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Engar probes"
+  },
+  "events": {
+    "title": "Nýleg events",
+    "loading": "Hleður events...",
+    "error": "Mistókst að hlaða events",
+    "empty": "Engin nýleg events fyrir þetta deployment",
+    "warning": "Viðvörun",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Afrita image",
+    "pod": "Afrita pod",
+    "kubectl": "Afrita kubectl",
+    "copied": "Afritað"
   }
 }

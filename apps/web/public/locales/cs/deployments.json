@@ -36,7 +36,8 @@
     "image": "Image",
     "replicas": "Ready / Celkem",
     "revision": "Revize",
-    "status": "Stav"
+    "status": "Stav",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "V pořádku",
@@ -314,5 +315,29 @@
       "every": "každých {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Hledat podle názvu, image, namespace nebo varování",
+    "empty": "Žádné deployments neodpovídají hledání"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Žádné probes"
+  },
+  "events": {
+    "title": "Nedávné události",
+    "loading": "Načítání událostí...",
+    "error": "Nepodařilo se načíst události",
+    "empty": "Žádné nedávné události pro tento deployment",
+    "warning": "Varování",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Kopírovat image",
+    "pod": "Kopírovat pod",
+    "kubectl": "Kopírovat kubectl",
+    "copied": "Zkopírováno"
   }
 }

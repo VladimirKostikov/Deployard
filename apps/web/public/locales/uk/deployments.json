@@ -36,7 +36,8 @@
     "image": "Образ",
     "replicas": "Готово / Усього",
     "revision": "Ревізія",
-    "status": "Статус"
+    "status": "Статус",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Здоровий",
@@ -314,5 +315,29 @@
       "every": "кожні {{seconds}}с",
       "timeout": "таймаут {{seconds}}с"
     }
+  },
+  "search": {
+    "placeholder": "Пошук за назвою, образом, namespace або попередженням",
+    "empty": "Немає deployments за цим пошуком"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Немає probes"
+  },
+  "events": {
+    "title": "Останні події",
+    "loading": "Завантаження подій...",
+    "error": "Не вдалося завантажити події",
+    "empty": "Немає останніх подій для цього deployment",
+    "warning": "Попередження",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Копіювати image",
+    "pod": "Копіювати pod",
+    "kubectl": "Копіювати kubectl",
+    "copied": "Скопійовано"
   }
 }

@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestj
 import { ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
 import {
   DeploymentConfigSummary,
+  DeploymentEventSummary,
   DeploymentHealthInsight,
   DeploymentRevision,
   DeploymentSummary,
@@ -59,6 +60,17 @@ export class DeploymentsController {
   @ApiParam({ name: 'name' })
   get(@Query('namespace') namespace: string, @Param('name') name: string): Promise<DeploymentSummary> {
     return this.deploymentsService.get(namespace, name);
+  }
+
+  @Get(':name/events')
+  @RequireAccess(AppSection.DEPLOYMENTS, AccessLevel.VIEW)
+  @ApiQuery({ name: 'namespace', required: true })
+  @ApiParam({ name: 'name' })
+  events(
+    @Query('namespace') namespace: string,
+    @Param('name') name: string,
+  ): Promise<DeploymentEventSummary[]> {
+    return this.deploymentsService.listEvents(namespace, name);
   }
 
   @Post('project-groups/:partOf/restart')

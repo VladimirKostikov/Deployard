@@ -1,3 +1,20 @@
+export interface DeploymentWarningSummary {
+  reason: string;
+  message: string;
+  count: number;
+  lastTimestamp: string;
+}
+
+export interface DeploymentEventSummary {
+  type: string;
+  reason: string;
+  message: string;
+  count: number;
+  lastTimestamp: string;
+  involvedKind: string;
+  involvedName: string;
+}
+
 export interface DeploymentSummary {
   name: string;
   namespace: string;
@@ -13,6 +30,10 @@ export interface DeploymentSummary {
   disabled: boolean;
   previousReplicas?: number;
   disabledWithErrors?: boolean;
+  hasLivenessProbe: boolean;
+  hasReadinessProbe: boolean;
+  hasStartupProbe: boolean;
+  latestWarning?: DeploymentWarningSummary;
 }
 
 export interface DeploymentRevision {

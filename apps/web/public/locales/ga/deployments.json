@@ -34,7 +34,8 @@
     "image": "Íomhá",
     "replicas": "Réidh / Iomlán",
     "revision": "Revision",
-    "status": "Stádas"
+    "status": "Stádas",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Sláintiúil",
@@ -312,5 +313,29 @@
       "every": "gach {{seconds}}s",
       "timeout": "teorainn ama {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Cuardaigh de réir ainm, image, namespace nó rabhadh",
+    "empty": "Níl aon deployment ag teacht leis an gcuardach seo"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Gan probes"
+  },
+  "events": {
+    "title": "Imeachtaí le déanaí",
+    "loading": "Imeachtaí á lódáil...",
+    "error": "Theip ar lódáil imeachtaí",
+    "empty": "Níl imeachtaí le déanaí ag an deployment seo",
+    "warning": "Rabhadh",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Cóipeáil image",
+    "pod": "Cóipeáil pod",
+    "kubectl": "Cóipeáil kubectl",
+    "copied": "Cóipeáilte"
   }
 }

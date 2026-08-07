@@ -34,7 +34,8 @@
     "image": "Image",
     "replicas": "Ready / Total",
     "revision": "Revision",
-    "status": "Κατάσταση"
+    "status": "Κατάσταση",
+    "probes": "Probes"
   },
   "status": {
     "healthy": "Υγιές",
@@ -312,5 +313,29 @@
       "every": "κάθε {{seconds}}s",
       "timeout": "timeout {{seconds}}s"
     }
+  },
+  "search": {
+    "placeholder": "Αναζήτηση με όνομα, image, namespace ή προειδοποίηση",
+    "empty": "Κανένα deployment δεν ταιριάζει στην αναζήτηση"
+  },
+  "probes": {
+    "liveness": "Liveness",
+    "readiness": "Readiness",
+    "startup": "Startup",
+    "none": "Χωρίς probes"
+  },
+  "events": {
+    "title": "Πρόσφατα events",
+    "loading": "Φόρτωση events...",
+    "error": "Αποτυχία φόρτωσης events",
+    "empty": "Δεν υπάρχουν πρόσφατα events για αυτό το deployment",
+    "warning": "Προειδοποίηση",
+    "latest": "{{reason}}: {{message}}"
+  },
+  "copy": {
+    "image": "Αντιγραφή image",
+    "pod": "Αντιγραφή pod",
+    "kubectl": "Αντιγραφή kubectl",
+    "copied": "Αντιγράφηκε"
   }
 }

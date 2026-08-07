@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version
+        id: version
+        run: echo "tag=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Build release notes from CHANGELOG
+        id: notes
+        run: |
+          tag="${{ steps.version.outputs.tag }}"
+          version="${tag#v}"
+          notes_file="${RUNNER_TEMP}/release-notes.md"
+
+          awk -v ver="$version" '
+            BEGIN { grab=0 }
+            $0 ~ "^## \\[" ver "\\]" { grab=1; next }
+            grab && $0 ~ /^## \[/ { exit }
+            grab { print }
+          ' CHANGELOG.md > "$notes_file"
+
+          if [ ! -s "$notes_file" ]; then
+            echo "Release ${tag}" > "$notes_file"
+          fi
+
+          {
+            echo "NOTES<<EOF"
+            cat "$notes_file"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: ${{ steps.version.outputs.tag }}
+          body: ${{ steps.notes.outputs.NOTES }}
+          generate_release_notes: false

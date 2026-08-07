@@ -1,6 +1,6 @@
 {
   "name": "k8s-deployment-dashboard",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "Deployard — Kubernetes deployment control plane",
   "scripts": {

@@ -5,6 +5,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/VladimirKostikov/Deployard/actions/workflows/ci.yml"><img src="https://github.com/VladimirKostikov/Deployard/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://github.com/VladimirKostikov/Deployard/releases/latest"><img src="https://img.shields.io/github/v/release/VladimirKostikov/Deployard" alt="Release" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" /></a>
+  <a href="package.json"><img src="https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg" alt="Node.js 20+" /></a>
+</p>
+
+<p align="center">
   Created for <strong>educational and portfolio purposes</strong>.<br/>
   Free to use, modify, and share under the <a href="LICENSE">MIT License</a>.
 </p>
@@ -247,6 +254,7 @@ Details: [docs/architecture.md](docs/architecture.md) and [ADRs](docs/adr/)
 | [Architecture](docs/architecture.md) | Design and phases |
 | [Deploy](docs/deploy.md) | Helm, migrations, first admin |
 | [Repository layout](docs/repository-structure.md) | Folder conventions |
+| [Contributing](CONTRIBUTING.md) | Local setup, commits, PRs |
 | [Security](SECURITY.md) | Report a vulnerability |
 | [Changelog](CHANGELOG.md) | Release notes |
 

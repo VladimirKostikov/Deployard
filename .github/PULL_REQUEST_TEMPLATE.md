@@ -15,7 +15,7 @@
 - [ ] `pnpm lint` passes
 - [ ] `pnpm build` passes
 - [ ] Changes follow repository structure and code style
-- [ ] i18n strings added for all three languages (if UI changed)
+- [ ] i18n strings updated for all locales in `supported-languages.json` (if UI changed)
 
 ## Test plan
 

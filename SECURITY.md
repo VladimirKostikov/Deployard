@@ -4,13 +4,16 @@
 
 | Version | Supported |
 |---|---|
-| 0.x     | Yes       |
+| 0.1.x   | Yes       |
+| 0.0.x   | No        |
 
 ## Reporting a vulnerability
 
 Do not open a public GitHub issue for security vulnerabilities.
 
-Send a private report with:
+Prefer a private report via [GitHub Security Advisories](https://github.com/VladimirKostikov/Deployard/security/advisories/new).
+
+Include:
 
 - Description of the vulnerability
 - Steps to reproduce
